@@ -51,7 +51,7 @@ public class MockInitialContextFactory extends DefaultHandler implements Initial
             }
             if (inputStream != null) {
                 try {
-                    return loadInitialContext(inputStream);
+                    return loadInitialContext(inputStream, environment);
                 } finally {
                     inputStream.close();
                 }
@@ -63,9 +63,21 @@ public class MockInitialContextFactory extends DefaultHandler implements Initial
         return null;
     }
 
-    private Context loadInitialContext(final InputStream inputStream)
+    /**
+     * Load and parse the MockJNDI XML configuration file to populate the JNDI
+     * namespace.
+     *
+     * @param inputStream
+     * @param environment
+     * @return
+     * @throws IOException
+     * @throws ParserConfigurationException
+     * @throws SAXException
+     */
+    private Context loadInitialContext(final InputStream inputStream,
+                                       final Hashtable<?, ?> environment)
             throws IOException, ParserConfigurationException, SAXException {
-        final NameParser nameParser = new SimpleNameParser();
+        final NameParser nameParser = new SimpleNameParser(environment);
         final MockContext initialContext = new MockContext("", "", nameParser);
         final SAXParserFactory parserFactory = SAXParserFactory.newInstance();
         final SAXParser parser = parserFactory.newSAXParser();

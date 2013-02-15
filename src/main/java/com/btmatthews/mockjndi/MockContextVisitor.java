@@ -24,7 +24,5 @@ import javax.naming.NamingException;
  */
 public interface MockContextVisitor<T> {
 
-    T empty() throws NamingException;
-
     T visit(MockContext context) throws NamingException;
 }

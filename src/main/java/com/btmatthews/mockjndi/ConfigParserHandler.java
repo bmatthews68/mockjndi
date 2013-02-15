@@ -84,10 +84,10 @@ public final class ConfigParserHandler extends DefaultHandler {
             if (binding == null) {
                 // TODO Error - binding cannot be null!
             } else if (binding.isValid()) {
-                // TODO Error - User configured binding incorrectly
-            } else {
                 contextStack.peek().addBinding(binding);
                 binding = null;
+            } else {
+                // TODO Error - User configured binding incorrectly
             }
         } else if (qName.equals("property")) {
         }
