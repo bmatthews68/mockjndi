@@ -336,7 +336,7 @@ public final class MockContext implements Context {
         return visitContext(name, new MockContextVisitor<NameParser>() {
             @Override
             public NameParser visit(final MockContext context) throws NamingException {
-                return context.getNameParser(name.getSuffix(1));
+                return context.nameParser;
             }
         });
     }
@@ -466,7 +466,7 @@ public final class MockContext implements Context {
                 throw new NameNotFoundException();
             }
         } else {
-            return subContext.visitContext(name.getSuffix(name.size() - 1), visitor);
+            return subContext.visitContext(name.getSuffix(1), visitor);
         }
     }
 }
