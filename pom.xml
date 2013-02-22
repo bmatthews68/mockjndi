@@ -190,24 +190,24 @@
         </dependency>
     </dependencies>
     <scm>
-        <url>scm:git:git@github.com:bmatthews68/ldapunit.git</url>
-        <connection>scm:git:git@github.com:bmatthews68/ldapunit.git</connection>
-        <developerConnection>scm:git:git@github.com:bmatthews68/ldapunit.git</developerConnection>
+        <url>scm:git:git@github.com:bmatthews68/mockjndi.git</url>
+        <connection>scm:git:git@github.com:bmatthews68/mockjndi.git</connection>
+        <developerConnection>scm:git:git@github.com:bmatthews68/mockjndi.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
-    <url>https://github.com/bmatthews68/ldapunit</url>
+    <url>https://github.com/bmatthews68/mockjndi</url>
     <organization>
         <name>Brian Matthews</name>
         <url>http://btmatthews.com</url>
     </organization>
     <issueManagement>
-        <url>https://github.com/bmatthews68/ldapunit/issues</url>
+        <url>https://github.com/bmatthews68/mockjndi/issues</url>
         <system>GitHub</system>
     </issueManagement>
     <distributionManagement>
         <site>
             <id>gh-pages</id>
-            <url>gitsite:git@github.com/bmatthews68/ldapunit.git</url>
+            <url>gitsite:git@github.com/bmatthews68/mockjndi.git</url>
         </site>
         <repository>
             <id>releases.sonatype</id>

@@ -4,10 +4,20 @@
         <context name="env">
             <context name="jdbc">
                 <binding name="myDS" type="javax.sql.DataSource">
-                    <property name="url" value="jdbc:h2:tcp://localhost/mem:mydb" />
-                    <property name="driver" value="org.h2.Driver" />
-                    <property name="user" value="sa" />
-                    <property name="password" value="" />
+                    <property name="url" value="jdbc:h2:tcp://localhost/mem:mydb"/>
+                    <property name="driver" value="org.h2.Driver"/>
+                    <property name="user" value="sa"/>
+                    <property name="password" value=""/>
+                </binding>
+            </context>
+            <context name="mail">
+                <binding name="Session" type="javax.mail.Session">
+                    <property name="mail.user" value="admin"/>
+                    <property name="mail.password" value="secret"/>
+                    <property name="mail.transport.protocol" value="smtp"/>
+                    <property name="mail.smtp.host" value="localhost"/>
+                    <property name="mail.smtp.port" value="25"/>
+                    <property name="mail.debug" value="true"/>
                 </binding>
             </context>
         </context>

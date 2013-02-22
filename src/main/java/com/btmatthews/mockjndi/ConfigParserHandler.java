@@ -58,6 +58,8 @@ public final class ConfigParserHandler extends DefaultHandler {
             final String type = attributes.getValue("type");
             if ("javax.sql.DataSource".equals(type)) {
                 binding = new DataSourceBinding(name);
+            } if ("javax.mail.Session".equals(type)) {
+                binding = new MailSessionBinding(name);
             }
         } else if (qName.equals("property")) {
             final String name = attributes.getValue("name");
