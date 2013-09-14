@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <context name="comp">
+        <context name="env">
+            <context name="jdbc">
+                <binding name="myDS" type="javax.sql.DataSource">
+                    <property name="url" value="jdbc:h2:tcp://localhost/mem:mydb"/>
+                    <property name="driver" value="org.h2.Driver"/>
+                    <property name="user" value="sa"/>
+                    <property name="password" value=""/>
+                </binding>
+            </context>
+        </context>
+    </context>
+</root>
