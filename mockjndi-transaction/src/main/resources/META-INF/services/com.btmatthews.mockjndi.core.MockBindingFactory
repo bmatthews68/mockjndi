@@ -1,0 +1,2 @@
+com.btmatthews.mockjndi.transaction.TransactionManagerBindingFactory
+com.btmatthews.mockjndi.transaction.UserTransactionBindingFactory

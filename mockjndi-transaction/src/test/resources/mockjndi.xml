@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <context name="comp">
+        <context name="env">
+            <context name="mail">
+                <binding name="Session" type="javax.mail.Session">
+                    <property name="mail.user" value="admin"/>
+                    <property name="mail.password" value="secret"/>
+                    <property name="mail.transport.protocol" value="smtp"/>
+                    <property name="mail.smtp.host" value="localhost"/>
+                    <property name="mail.smtp.port" value="25"/>
+                    <property name="mail.debug" value="true"/>
+                </binding>
+            </context>
+        </context>
+    </context>
+</root>
