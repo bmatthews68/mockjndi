@@ -16,6 +16,7 @@
 
 package com.btmatthews.mockjndi.transaction;
 
+import com.atomikos.icatch.jta.UserTransactionManager;
 import com.btmatthews.mockjndi.core.MockBinding;
 import com.btmatthews.mockjndi.core.MockBindingFactory;
 
@@ -25,14 +26,17 @@ import javax.transaction.UserTransaction;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class UserTransactionBindingFactory implements MockBindingFactory {
+public final class UserTransactionBindingFactory implements MockBindingFactory {
+
+    private UserTransactionManager userTransactionManager;
+
     @Override
     public String getType() {
         return UserTransaction.class.getName();
     }
 
     @Override
-    public MockBinding createBinding(String name) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+    public MockBinding createBinding(final String name) {
+        return new UserTransactionBinding(name);
     }
 }

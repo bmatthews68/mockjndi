@@ -25,7 +25,7 @@ import javax.mail.Session;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class MailSessionBindingFactory implements MockBindingFactory {
+public final class MailSessionBindingFactory implements MockBindingFactory {
 
     @Override
     public String getType() {

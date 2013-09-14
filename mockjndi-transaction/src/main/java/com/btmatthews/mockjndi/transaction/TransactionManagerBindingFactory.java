@@ -14,26 +14,26 @@
  * limitations under the License.
  */
 
-package com.btmatthews.mockjndi.datasource;
+package com.btmatthews.mockjndi.transaction;
 
 import com.btmatthews.mockjndi.core.MockBinding;
 import com.btmatthews.mockjndi.core.MockBindingFactory;
 
-import javax.sql.DataSource;
+import javax.transaction.TransactionManager;
 
 /**
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public final class DataSourceBindingFactory implements MockBindingFactory {
+public final class TransactionManagerBindingFactory implements MockBindingFactory {
 
     @Override
     public String getType() {
-        return DataSource.class.getName();
+        return TransactionManager.class.getName();
     }
 
     @Override
     public MockBinding createBinding(final String name) {
-        return new DataSourceBinding(name);
+        return new TransactionManagerBinding(name);
     }
 }

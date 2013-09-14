@@ -23,7 +23,7 @@ import javax.naming.spi.ObjectFactory;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class ObjectFactoryBinding extends AbstractBinding {
+public final class ObjectFactoryBinding extends AbstractBinding {
 
     private Class<ObjectFactory> objectFactoryClass;
 

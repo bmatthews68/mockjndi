@@ -22,7 +22,7 @@ import com.btmatthews.mockjndi.core.AbstractBinding;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class UserTransactionBinding extends AbstractBinding {
+public final class UserTransactionBinding extends AbstractBinding {
 
     public UserTransactionBinding(final String name) {
         super(name);
@@ -34,11 +34,11 @@ public class UserTransactionBinding extends AbstractBinding {
     }
 
     @Override
-    public void setValue(String name, String value) {
+    public void setValue(final String name, final String value) {
     }
 
     @Override
-    public Object createBoundObject() {
+    protected Object createBoundObject() {
         return null;
     }
 }

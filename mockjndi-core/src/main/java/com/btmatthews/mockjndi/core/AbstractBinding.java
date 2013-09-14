@@ -39,8 +39,8 @@ public abstract class AbstractBinding implements MockBinding {
     }
 
     @Override
-    public Object getBoundObject() {
-        if (boundObject == null) {
+    public synchronized Object getBoundObject() {
+        if (boundObject == null && isValid()) {
             boundObject = createBoundObject();
         }
         return boundObject;

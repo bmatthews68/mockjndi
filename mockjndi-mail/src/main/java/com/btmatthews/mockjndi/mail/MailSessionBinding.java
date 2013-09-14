@@ -25,9 +25,8 @@ import java.util.Properties;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class MailSessionBinding extends AbstractBinding {
+public final class MailSessionBinding extends AbstractBinding {
 
-    private Session session;
     private Properties properties = new Properties();
 
     public MailSessionBinding(final String name) {
@@ -45,10 +44,7 @@ public class MailSessionBinding extends AbstractBinding {
     }
 
     @Override
-    public Object createBoundObject() {
-        if (session == null) {
-            session = Session.getInstance(properties);
-        }
-        return session;
+    protected Object createBoundObject() {
+        return Session.getInstance(properties);
     }
 }

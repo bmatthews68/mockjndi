@@ -36,7 +36,7 @@ import java.util.Hashtable;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class MockInitialContextFactory extends DefaultHandler implements InitialContextFactory {
+public final class MockInitialContextFactory extends DefaultHandler implements InitialContextFactory {
     @Override
     public Context getInitialContext(final Hashtable<?, ?> environment) throws NamingException {
         final InputStream inputStream;

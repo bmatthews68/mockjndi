@@ -29,7 +29,7 @@ import java.util.Properties;
  * @author <a href="mailto:brian@btmatthews.com">Brian Matthews</a>
  * @since 1.0.0
  */
-public class SimpleNameParser implements NameParser {
+public final class SimpleNameParser implements NameParser {
 
     /**
      * The environment properties that will be used to when constructing

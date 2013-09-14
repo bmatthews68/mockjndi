@@ -25,7 +25,6 @@ import org.apache.commons.dbcp.BasicDataSource;
  */
 public final class DataSourceBinding extends AbstractBinding {
 
-    private BasicDataSource dataSource;
     private String driver;
     private String url;
     private String user;
@@ -54,16 +53,14 @@ public final class DataSourceBinding extends AbstractBinding {
     }
 
     @Override
-    public Object createBoundObject() {
-        if (dataSource == null && isValid()) {
-            dataSource = new BasicDataSource();
-            dataSource.setDriverClassName(driver);
-            dataSource.setUrl(url);
-            if (user != null) {
-                dataSource.setUsername(user);
-                if (password != null) {
-                    dataSource.setPassword(password);
-                }
+    protected synchronized Object createBoundObject() {
+        final BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setDriverClassName(driver);
+        dataSource.setUrl(url);
+        if (user != null) {
+            dataSource.setUsername(user);
+            if (password != null) {
+                dataSource.setPassword(password);
             }
         }
         return dataSource;

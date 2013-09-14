@@ -10,7 +10,7 @@
         <artifactId>mockjndi</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>mockjndi-datasource</artifactId>
+    <artifactId>mockjndi-transaction</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.btmatthews.mockjndi</groupId>
@@ -19,6 +19,22 @@
         <dependency>
             <groupId>javax.transaction</groupId>
             <artifactId>jta</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>transactions-jta</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.atomikos</groupId>
+            <artifactId>atomikos-util</artifactId>
         </dependency>
     </dependencies>
 </project>	
